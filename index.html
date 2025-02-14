@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+    
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .bottom-nav img {
+            width: 100%;
+            width: 100%
+           
+        }
+        .messages-container {
+            width: 100%;
+            max-width: 100%;
+            background: white;
+            border-radius:10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 11px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .messages-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .messages-list li {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .messages-list li:hover {
+            background: #f1f1f1;
+        }
+        .messages-list img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .messages-list .name {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .messages-list .time {
+            font-size: 12px;
+            color: #777;
+            margin: 0;
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="messages-container">
+        <h2>Messages</h2>
+        <ul class="messages-list">
+            <li onclick="redirectToChat()">
+                <img src="https://static.intercomassets.com/avatars/7643115/square_128/Screenshot_2024-08-09_at_5.13.30_PM-1723194846.png" alt="User 1">
+                <div>
+                    <p class="name">Jeddy</p>
+                    <p class="time">23h ago</p>
+                </div>
+            </li>
+            <li onclick="redirectToChat()">
+                <img src="https://static.intercomassets.com/avatars/7643115/square_128/Screenshot_2024-08-09_at_5.13.30_PM-1723194846.png" alt="User 2">
+                <div>
+                    <p class="name">Marko</p>
+                    <p class="time">2w ago</p>
+                </div>
+            </li>
+            <li onclick="redirectToChat()">
+                <img src="https://static.intercomassets.com/avatars/7643115/square_128/Screenshot_2024-08-09_at_5.13.30_PM-1723194846.png" alt="User 3">
+                <div>
+                    <p class="name">Pavle</p>
+                    <p class="time">2w ago</p>
+                </div>
+            </li>
+            <li onclick="redirectToChat()">
+                <img src="https://static.intercomassets.com/avatars/7643115/square_128/Screenshot_2024-08-09_at_5.13.30_PM-1723194846.png" alt="User 4">
+                <div>
+                    <p class="name">Nebojša</p>
+                    <p class="time">2w ago</p>
+                </div>
+            </li>
+            <li onclick="redirectToChat()">
+                <img src="https://static.intercomassets.com/avatars/7643115/square_128/Screenshot_2024-08-09_at_5.13.30_PM-1723194846.png" alt="User 5">
+                <div>
+                    <p class="name">Ruela</p>
+                    <p class="time">2w ago</p>
+                </div>
+            </li>
+            <li onclick="redirectToChat()">
+                <img src="https://static.intercomassets.com/avatars/7643115/square_128/Screenshot_2024-08-09_at_5.13.30_PM-1723194846.png" alt="User 6">
+                <div>
+                    <p class="name">Georgette</p>
+                    <p class="time">6w ago</p>
+                </div>
+                <li onclick="redirectToChat()">
+                    <img src="https://static.intercomassets.com/avatars/7643115/square_128/Screenshot_2024-08-09_at_5.13.30_PM-1723194846.png" alt="User 5">
+                    <div>
+                        <p class="name">Ruela</p>
+                        <p class="time">2w ago</p>
+                    </div>
+                </li>
+                <li onclick="redirectToChat()">
+                    <img src="https://static.intercomassets.com/avatars/7643115/square_128/Screenshot_2024-08-09_at_5.13.30_PM-1723194846.png" alt="User 6">
+                    <div>
+                        <p class="name">Georgette</p>
+                        <p class="time">6w ago</p>
+                    </div> <li onclick="redirectToChat()">
+                        <img src="https://static.intercomassets.com/avatars/7643115/square_128/Screenshot_2024-08-09_at_5.13.30_PM-1723194846.png" alt="User 5">
+                        <div>
+                            <p class="name">Ruela</p>
+                            <p class="time">2w ago</p>
+                        </div>
+                    </li>
+                    <li onclick="redirectToChat()">
+                        <img src="https://static.intercomassets.com/avatars/7643115/square_128/Screenshot_2024-08-09_at_5.13.30_PM-1723194846.png" alt="User 6">
+                        <div>
+                            <p class="name">Georgette</p>
+                            <p class="time">6w ago</p>
+                        </div>
+            </li>
+            </li>
+        </ul>
+
+        
+    </div>
+    <div class="bottom-nav">
+            <img src="Screenshot 2025-02-14 165204.png" >
+        </div>
+    <script>
+        function redirectToChat() {
+            window.location.href = "chat.html";
+        }
+    </script>
+</body>
+</html>
