@@ -139,9 +139,45 @@
     border: none;
     padding: 10px 15px;
     margin-left: 10px;
+    margin-right: 15px;
     border-radius: 50%;
     cursor: pointer;
 }
+
+
+#chat-input {
+            flex-grow: 1;
+            padding: 10px 40px 10px 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        #chat-input:focus {
+            border-color: #007bff;
+        }
+
+.upload-icon {
+            position: absolute;
+              
+            right: 60px;
+            top: 50%;
+            padding: 0px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+}
+
+.upload-icon img {
+            width: 60px;
+            padding: 30px;
+            margin-top: 5px;
+            height: 17px;
+        }
+
     </style>
 </head>
 <body>
@@ -154,7 +190,42 @@
     </div>
     <div class="input-container">
         <input type="text" id="messageInput" placeholder="Message...">
-        <button onclick="sendMessage()">&#10148;</button>
+        <label for="file-upload" class="upload-icon">
+            <img src="https://firebasestorage.googleapis.com/v0/b/contactform-37fe3.appspot.com/o/icons-removebg-preview.png?alt=media&token=195394bf-77c5-43d9-8106-6764b27820b8" alt="Upload Image">
+        </label>
+        <input type="file" id="file-upload" style="display: none;">
+        <button  id="send-button" onclick="sendMessage()">&#10148;</button>
+        
     </div>
+///////////////////
+
+<script>
+    const chatInput = document.getElementById('messageInput');
+    const uploadIcon = document.querySelector('.upload-icon');
+    const sendButton = document.getElementById('send-button');
+
+    chatInput.addEventListener('input', function() {
+        if (this.value.trim() !== '') {
+            uploadIcon.style.opacity = '0';
+            uploadIcon.style.pointerEvents = 'none';
+            sendButton.style.display = 'block';
+        } else {
+            uploadIcon.style.opacity = '1';
+            uploadIcon.style.pointerEvents = 'auto';
+            sendButton.style.display = 'none';
+        }
+    });
+
+    function sendMessage() {
+        alert('Message sent: ' + chatInput.value);
+        chatInput.value = '';
+        sendButton.style.display = 'none';
+        uploadIcon.style.opacity = '1';
+        uploadIcon.style.pointerEvents = 'auto';
+    }
+</script>
+
+
+
 </body>
 </html>
